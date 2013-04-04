@@ -6,7 +6,7 @@ var cart =
 
 	init: function()
 	{
-		var now = parseInt (new Date().getTime() / 1000);
+		var now = parseInt (new Date().getTime());
 
 		if (localStorage.expires)
 		{
