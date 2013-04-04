@@ -50,11 +50,11 @@ _.getInt = function (value)
 		if (!/[0-9]/.test(value.substr(i, 1)))
 		{
 			if (i == 0) break;
-			return parseInt(value.substr(0,i));
+			return parseInt(value.substr(0,i),10);
 		}
 	}
 
-	return parseInt(value);
+	return parseInt(value,10);
 };
 
 _.truncate = function (str, len)

@@ -6,7 +6,7 @@ var cart =
 
 	init: function()
 	{
-		var now = parseInt (new Date().getTime());
+		var now = parseInt (new Date().getTime(),10);
 
 		if (localStorage.expires)
 		{
@@ -32,7 +32,7 @@ var cart =
 	},
 
 	getTotal: function () {
-		if (localStorage.total) return parseInt(localStorage.total);
+		if (localStorage.total) return parseInt(localStorage.total,10);
 		return 0;
 	},
 
@@ -43,7 +43,7 @@ var cart =
 	getItem: function (id)
 	{
 		if (this.items[id])
-			return parseInt(this.items[id]);
+			return parseInt(this.items[id],10);
 		else
 			return 0;
 	},
@@ -87,7 +87,7 @@ var ProductDetailsView = Backbone.View.extend ({
 		var t = $(evt.target);
 		t.parents(".qty:first").data("value", t.text()).find(".value").text(t.text());
 
-		this.qty = parseInt(t.text());
+		this.qty = parseInt(t.text(),10);
 	},
 
 	_addToCart: function(evt)
@@ -118,9 +118,9 @@ var ProductDetailsView = Backbone.View.extend ({
 		if (!this.data.images || !this.data.images.length) this.data.images = [{ lgImageSrc: this.data.productImageUrl }];
 
 		this.data.related = [
-			$.extend({ cls: "a first" }, dataset[parseInt(Math.random()*dataset.length)]),
-			$.extend({ cls: "b" }, dataset[parseInt(Math.random()*dataset.length)]),
-			$.extend({ cls: "c last" }, dataset[parseInt(Math.random()*dataset.length)])
+			$.extend({ cls: "a first" }, window.itemdataset[parseInt(Math.random()*itemdataset.length,10)]),
+			$.extend({ cls: "b" }, window.itemdataset[parseInt(Math.random()*itemdataset.length,10)]),
+			$.extend({ cls: "c last" }, window.itemdataset[parseInt(Math.random()*itemdataset.length,10)])
 		];
 
 		// Format specifications.
@@ -245,7 +245,7 @@ var ProductDetailsView = Backbone.View.extend ({
 
 	refreshComments: function()
 	{
-		var filterGender = parseInt(this.$(".filter1.value").data("value"));
+		var filterGender = parseInt(this.$(".filter1.value").data("value"),10);
 		var filterAge = this.$(".filter2.value").data("value");
 		var filterRating = this.$(".filter3.value").data("value").split(",");
 		var filterSort = this.$(".filter4.value").data("value");
@@ -253,11 +253,11 @@ var ProductDetailsView = Backbone.View.extend ({
 		switch (filterSort)
 		{
 			case "helpful":
-				this.data.ratings.sort(function(a,b){ return parseInt(b.helpfulvotes) - parseInt(a.helpfulvotes); });
+				this.data.ratings.sort(function(a,b){ return parseInt(b.helpfulvotes,10) - parseInt(a.helpfulvotes,10); });
 				break;
 
 			case "rating":
-				this.data.ratings.sort(function(a,b){ return parseInt(b.rating) - parseInt(a.rating); });
+				this.data.ratings.sort(function(a,b){ return parseInt(b.rating,10) - parseInt(a.rating,10); });
 				break;
 		}
 
@@ -267,7 +267,7 @@ var ProductDetailsView = Backbone.View.extend ({
 		{
 			var inf = this.data.ratings[i];
 
-			if (!(parseInt(inf.rating) >= filterRating[0] && parseInt(inf.rating) <= filterRating[1]))
+			if (!(parseInt(inf.rating,10) >= filterRating[0] && parseInt(inf.rating,10) <= filterRating[1]))
 				continue;
 
 			if (filterAge != "All" && filterAge != inf.age.toLowerCase())
@@ -284,13 +284,13 @@ var ProductDetailsView = Backbone.View.extend ({
 				by: inf.customer,
 				date: inf.date,
 				verified: inf.isVerified=="false"?"Non-Verified Customer":"Verified Customer",
-				rating: parseInt((100*parseFloat(inf.rating)/5))+"%",
+				rating: parseInt((100*parseFloat(inf.rating)/5),10)+"%",
 				descr: inf.review,
-				value: parseInt((100*parseFloat(inf.value)/5)/25)*25+"%",
-				fit: parseInt((100*parseFloat(inf.meetsexpectations)/5)/25)*25+"%",
-				quality: parseInt((100*parseFloat(inf.picturequality)/5)/25)*25+"%",
-				satisfaction: parseInt((100*parseFloat(inf.features)/5)/25)*25+"%",
-				styling: parseInt((100*parseFloat(inf.soundquality)/5)/25)*25+"%",
+				value: parseInt((100*parseFloat(inf.value)/5)/25,10)*25+"%",
+				fit: parseInt((100*parseFloat(inf.meetsexpectations)/5)/25,10)*25+"%",
+				quality: parseInt((100*parseFloat(inf.picturequality)/5)/25,10)*25+"%",
+				satisfaction: parseInt((100*parseFloat(inf.features)/5)/25,10)*25+"%",
+				styling: parseInt((100*parseFloat(inf.soundquality)/5)/25,10)*25+"%",
 				age: inf.age,
 				gender: inf.gender,
 				ownership: inf.ownership,

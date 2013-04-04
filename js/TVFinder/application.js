@@ -36,8 +36,8 @@ $(function()
 
 			$.ajax ({ type: "get", async: false, url: url, dataType: "json", success: function(result)
 			{
-				var dataset = [];
-				window["dataset"] = dataset;
+				var itemdataset = [];
+				window.itemdataset = itemdataset;
 
 				for (var i = 0; i < result.length; i++)
 				{
@@ -50,22 +50,22 @@ $(function()
 						descr: _.truncate(item.name.substr(2 + item.name.indexOf("\"")), 28),
 						size: item.size,
 
-						price: parseInt (item.price),
-						cents: (item.price - parseInt(item.price)).toFixed(2).substr(1),
+						price: parseInt (item.price,10),
+						cents: (item.price - parseInt(item.price,10)).toFixed(2).substr(1),
 
-						list_price: parseInt (item.listPrice),
-						list_cents: (item.listPrice - parseInt(item.listPrice)).toFixed(2).substr(1),
+						list_price: parseInt (item.listPrice,10),
+						list_cents: (item.listPrice - parseInt(item.listPrice,10)).toFixed(2).substr(1),
 
 						with_discount: parseFloat(item.listPrice) != parseFloat(item.price),
 
-						rating: 25*parseInt(((item.rating/5)*100)/25) + "%",
+						rating: 25*parseInt(((item.rating/5)*100)/25,10) + "%",
 						brand: item.brand,
 						type: item.type,
 						ldescr: item.description,
 						id: _.last(item.url.split("/"))
 					};
 
-					dataset.push(item);
+					itemdataset.push(item);
 					_this.add (item);
 				}
 			}});
@@ -327,7 +327,7 @@ $(function()
 				this.range_max = this.range_max === null ? this.products.at(i).get("size") : Math.max (this.products.at(i).get("size"), this.range_max);
 			}
 
-			this.range_mid = parseInt((this.range_max + this.range_min) / 2);
+			this.range_mid = parseInt((this.range_max + this.range_min) / 2,10);
 		},
 
 		filterTypes: function()
@@ -336,7 +336,7 @@ $(function()
 
 			for (var i = 0; i < this.products.length; i++)
 			{
-				var size = parseInt (this.products.at(i).get("size"));
+				var size = parseInt (this.products.at(i).get("size"),10);
 
 				if (!(this.range[0] <= size && size <= this.range[1]))
 					continue;
@@ -365,7 +365,7 @@ $(function()
 
 			for (var i = 0; i < this.products.length; i++)
 			{
-				var size = parseInt (this.products.at(i).get("size"));
+				var size = parseInt (this.products.at(i).get("size"),10);
 
 				if (!(this.range[0] <= size && size <= this.range[1]))
 					continue;
@@ -529,7 +529,7 @@ $(function()
 				if (selectedBrand != "All" && item.get("brand") != selectedBrand)
 					return false;
 
-				if (!(rangeStart <= parseInt(item.get("size")) && parseInt(item.get("size")) <= rangeEnd))
+				if (!(rangeStart <= parseInt(item.get("size"),10) && parseInt(item.get("size"),10) <= rangeEnd))
 					return false;
 
 				return true;
