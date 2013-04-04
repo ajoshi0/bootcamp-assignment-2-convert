@@ -1,0 +1,12 @@
+<div class="review_title">{{#with genericContent}}{{itemName}}{{/with}}</div>
+
+<div class="review_subtitle">
+	<div class="score">
+		<div style="width: {{#with model}}{{rating}}{{/with}};"></div>
+	</div>
+	<a href="#reviews"><span>{{#with ratings}}{{length}}{{/with}}</span> Reviews</a>
+	<a href="https://www.walmart.com/subflow/BVAppsLoginContext/215449584/sub_generic_login/start.do?bvappcode=rr&bvauthenticateuser=true&bvcontenttype=REVIEW_SUBMISSION&bvdisplaycode=1336&bvpage=http%3A%2F%2Fwalmart.ugc.bazaarvoice.com%2F1336%2F21311919%2Fsubmitreview.htm%3Fformat%3Dembedded%26campaignid%3DBV_RATING_SUMMARY%26sessionparams%3D__BVSESSIONPARAMS__%26return%3Dhttp%253A%252F%252Fwww.walmart.com%252Fip%252FVIZIO-60-Class-LED-1080p-120Hz-SMART-HDTV-1.94-ultra-slim-E601i-A3%252F21311919%26innerreturn%3Dhttp%253A%252F%252Fwalmart.ugc.bazaarvoice.com%252F1336%252F21311919%252Fratings.djs%253Fformat%253Dembeddedhtml%26user%3D__USERID__%26authsourcetype%3D__AUTHTYPE__&bvproductid=21311919">Write a Review</a>
+	<a href="http://www.walmart.com/ip/VIZIO-60-Class-LED-1080p-120Hz-SMART-HDTV-1.94-ultra-slim-E601i-A3/21311919#Q%26A+Exchange" class="last">Ask a Question</a>
+
+	<div class="price">${{#with model}}{{price}}{{cents}}{{/with}}</div>
+</div>

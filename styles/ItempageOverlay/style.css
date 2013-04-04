@@ -1,0 +1,388 @@
+/* ---- */
+.review_layer {
+	position: fixed; left: 0px; top: 66px; width: 100%; height: 94%;
+	background: rgba(0,0,0,0.3); overflow-y: scroll; z-index: 999;
+}
+
+.review_panel {
+	position: absolute; right: 0px; top: 0px; width: 75%; padding: 16px 16px 32px 35px; background: #fff;
+	border-left: 2px solid #bbb;
+}
+
+.review_close {
+	text-decoration: none; display: block; width: 26px; height: 26px; background: url(../../images/reviews/close-panel.png);
+	position: absolute; right: 24px;
+}
+
+.review_close:hover {
+	cursor: pointer;
+}
+
+.review_title {
+	font-size: 2.2em; line-height: 1em; font-weight: normal; margin-bottom: 12px; color: #000;
+}
+
+/* ~ */
+.review_subtitle {
+}
+
+.review_subtitle .score {
+	display: inline-block; vertical-align: middle; height: 18px; width: 90px; background: url(../../images/icon-starbig2.png) repeat-x; margin-right: 8px;
+}
+
+.review_subtitle .score > div {
+	display: block; height: 18px; background: url(../../images/icon-starbig.png) repeat-x;
+}
+
+.review_subtitle a {
+	display: inline-block; vertical-align: middle; font-size: 1.3em; letter-spacing: -1px; font-weight: bold; color: #0F80C2;
+	border-right: 2px solid #0F80C2; padding-right: 8px; margin-right: 8px;
+}
+
+.review_subtitle a.last {
+	border-right: none; padding-right: 0px; margin-right: 0px;
+}
+
+.review_subtitle .price {
+	display: block; font-size: 2.6em; line-height: 1em; font-weight: bold; margin-top: 12px;
+}
+
+/* ~ */
+.review_carousel {
+	padding: 40px 0px;
+}
+
+.review_carousel .carousel-control {
+	border: none; background-color: transparent; width: 31px; height: 52px; opacity: 1;
+	-moz-border-radius: 0px; -webkit-border-radius: 0px; -o-border-radius: 0px; -ms-border-radius: 0px; border-radius: 0px;
+}
+
+.review_carousel .carousel-control.left {
+	background-image: url(../../images/reviews/arrow-left-gray.png);
+}
+
+.review_carousel .carousel-control.left:hover {
+	background-image: url(../../images/reviews/arrow-left.png);
+}
+
+.review_carousel .carousel-control.right {
+	background-image: url(../../images/reviews/arrow-right-gray.png);
+}
+
+.review_carousel .carousel-control.right:hover {
+	background-image: url(../../images/reviews/arrow-right.png);
+}
+
+.review_carousel .carousel-inner {
+	width: 80%; margin-left: 10%; text-align: center;
+}
+
+.review_carousel .carousel-inner > div img {
+	display: inline-block;
+}
+
+.review_carousel .carousel-indicators {
+	top: auto; right: auto; bottom: -40px; left: 50%; margin-left: -225px; width: 450px; text-align: center;
+}
+
+.review_carousel .carousel-indicators li {
+	display: inline-block !important; float: none !important; background: #ccc;
+}
+
+.review_carousel .carousel-indicators li:hover {
+	background: #777;
+}
+
+.review_carousel .carousel-indicators li.active {
+	background: #0e7fc1;
+}
+
+/* ~ */
+.review_info {
+	margin-top: 24px;
+}
+
+.review_info h1 {
+	font-size: 2.4em; font-weight: normal;
+}
+
+.review_info p {
+	font-size: 1.3em; line-height: 1.6em; font-weight: normal; color: #7E7E7E;
+}
+
+.review_info p a {
+	color: #0F80C2;
+}
+
+.review_info .btns {
+	margin-top: 64px;
+}
+
+.review_info .qty {
+	font-size: 1em;
+}
+
+.review_info .qty .dropdown-toggle {
+	font-size: 2.3em; line-height: 1em;
+	font-weight: bold !important; color: #7e7e7e;
+	padding: 16px 20px; height: 14px;
+}
+
+.review_info .qty .caret {
+	display: inline-block; width: 16px; height: 12px; background: url(../../images/reviews/button-down-arrow.png);
+	outline: none; border: none; margin-top: 2px;
+}
+
+.review_info .btn.btn-warning {
+	font-size: 2.3em; line-height: 1em; font-weight: bold !important; color: #fff; padding: 16px 20px; margin-left: 8px;
+}
+
+.review_info .actions {
+	margin-top: 28px;
+}
+
+.review_info .info {
+	padding-right: 40px;
+}
+
+.review_info .actions div {
+	display: block; font-weight: bold; margin: 10px 0px;
+}
+
+.review_info .actions div span {
+	display: inline-block; width: 28px; text-align: center; margin-right: 8px;
+}
+
+.review_info .actions div a {
+	display: inline-block; font-size: 1.3em; color: #0F80C2;
+}
+
+/* ~ */
+.review_separator {
+	border-top: 1px solid #d1d1d1;
+	margin: 0px -16px 20px -36px;
+}
+
+.review_separator.compact {
+	margin: 0px;
+}
+
+/* ~ */
+.review_related {
+}
+
+h1.def {
+	font-size: 2.4em; font-weight: normal;
+}
+
+h1.def span {
+	color: #0f80c2;
+}
+
+.btn.def {
+	margin-top: 15px; padding: 5px 16px; font-size: 1.4em; font-weight: bold; color: #777; text-shadow: 0px 1px 0px #fff;
+	-moz-border-radius: 17px; -webkit-border-radius: 17px; -o-border-radius: 17px; -ms-border-radius: 17px; border-radius: 17px;
+}
+
+.btn .right-arrow {
+	display: inline-block; vertical-align: middle; background: center center url(../../images/reviews/button-right-arrow.png) no-repeat; width: 19px; height: 19px;
+	padding: 0px; margin-left: 8px;
+}
+
+/* ~ */
+.review_related .item {	
+	position: relative; padding: 10px 0px 30px 0px; padding-left: 10px; padding-right: 20px;
+}
+
+.review_related .item.first {
+	padding-left: 0px;
+}
+
+.review_related .item:after {
+	position: absolute; right: 0px; top: 0px; content: ""; width: 1px; height: 100%; background:url(../../images/reviews/line.png);
+}
+
+.review_related .item.last:after {
+	display: none;
+}
+
+.review_related .item > img {
+	cursor: pointer; height: 146px;
+}
+
+.review_related .item > a {
+	display: block; color: #0e77bd; font-size: 1.5em; margin-top: 12px;
+	line-height: 1.4em; cursor: pointer; font-weight: bold;
+}
+
+.review_related .item > span {
+	display: block; color: #aaa; margin-top: 6px; font-weight: bold; font-size: 1em;
+}
+
+.review_related .item > em {
+	display: block; font-style: normal; font-size: 2.7em; color: #222; font-weight: bold; margin-top: 16px; position: relative;
+}
+
+.review_related .item > em.striked {
+	font-size: 1.6em; text-decoration: line-through; color: #555;
+}
+
+.review_related .item > em > span {
+	position: absolute; top: -5px; font-size: 0.6em;
+}
+
+.review_related .item > i {
+	display: block; height: 16px; width: 90px; margin-top: 14px;
+	background: url(../../images/bg-score-low.png) repeat-x;
+}
+
+.review_related .item > i > i {
+	display: block; height: 16px;
+	background: url(../../images/bg-score-high.png) repeat-x;
+}
+
+.review_related .review_separator {
+	margin-top: 0px;
+}
+
+/* ~ */
+.review_details .tabbable {
+	margin-left: -35px; margin-right: -16px; background: #fafafa;
+}
+
+.review_details .nav-tabs {
+	float: left; background: #fafafa; border-top: 1px solid #ddd; width: 30%; margin: 0 !important;
+}
+
+.review_details .nav-tabs li {
+	display: block; margin: 0 !important; position: relative;
+	-moz-border-radius: none; -webkit-border-radius: none; -o-border-radius: none; -ms-border-radius: none; border-radius: none;
+	border-bottom: 1px solid #ddd;
+}
+
+.review_details .nav-tabs a {
+	display: block; font-size: 1.7em; padding: 26px 40px; font-weight: bold; margin: 0 !important;
+	margin-right: -1px !important;
+	-moz-border-radius: none; -webkit-border-radius: none; -o-border-radius: none; -ms-border-radius: none; border-radius: none;
+}
+
+.review_details .nav-tabs li.active a {
+	background: url(../../images/reviews/tab-bg.png);
+	background-size: 100% auto;
+}
+
+.review_details .nav-tabs li.active a {
+	border-right: 1px solid #fff;
+}
+
+.review_details .tab-content {
+	float: right; background: #fff; width: 68.9%; font-size: 1.3em; line-height: 1.6em; color: #777; min-height: 600px;
+	border-left: 1px solid #ddd; margin-left: -1%; margin-right: 1%;
+}
+
+.review_details .tab-content > div {
+	padding: 16px 24px;
+}
+
+.review_details .tab-content b {
+	color: #333;
+}
+
+.review_details .tab-content p {
+	margin-bottom: 32px;
+}
+
+.review_details .review_separator {
+	margin-top: 0px;
+}
+
+.dd {
+	font-size: 1em; margin: 20px 0px; margin-right: 10px;
+}
+
+.dd .dropdown-toggle {
+	font-size: 1.4em; line-height: 1em; font-weight: normal !important; color: #444;
+	padding: 10px 14px;
+}
+
+.dd .caret {
+	display: inline-block; width: 12px; height: 7px; background: url(../../images/reviews/button-down-arrow2.png);
+	outline: none; border: none; margin-top: 6px; margin-left: 5px;
+}
+
+/* ~ */
+.left-separator {
+	position: relative;
+}
+
+.left-separator:after {
+	position: absolute; left: 0px; top: 0px; content: ""; width: 1px; height: 100%; background: 0px bottom url(../../images/reviews/line2.png);
+}
+
+/* ~ */
+.review_comment {
+	background: #eee url(../../images/reviews/comment-bg.png) repeat-x;
+	margin: 0px -16px -32px -35px;
+}
+
+.review_comment .item {
+	text-align: left; background: #fff;
+	border: 1px solid #ccc; padding: 30px 40px;
+	-moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; border-radius: 5px;
+}
+
+.review_comment .item h1 {
+	font-size: 2em; line-height: 1em; margin: 0px; padding: 0px; font-weight: normal;
+}
+
+.review_comment .item h3 {
+	font-size: 1.3em; line-height: 1em; margin: 5px 0 0 0; padding: 0px; color: #bbb; font-weight: bold;
+}
+
+.review_comment .item > i {
+	display: block; height: 16px; width: 90px; margin-top: 7px;
+	background: url(../../images/bg-score-low.png) repeat-x;
+}
+
+.review_comment .item > i > i {
+	display: block; height: 16px;
+	background: url(../../images/bg-score-high.png) repeat-x;
+}
+
+.review_comment .item > p {
+	font-size: 1.3em; line-height: 1.6em; font-weight: normal; color: #7E7E7E;
+	margin-top: 24px;
+}
+
+.review_comment .item b {
+	display: block; font-size: 1.3em; color: #7e7e7e; padding: 0px;
+	height: 32px;
+}
+
+.review_comment .item b > b {
+	display: inline-block; font-size: 1em; width: 130px; height: auto;
+}
+
+.review_comment .item b > i {
+	display: inline-block; height: 16px; width: 90px; margin-top: 7px;
+	background: url(../../images/bg-score-low.png) repeat-x;
+}
+
+.review_comment .item b > i > i {
+	display: block; height: 16px;
+	background: url(../../images/bg-score-high.png) repeat-x;
+}
+
+.review_comment .item b > span {
+	font-weight: normal;
+}
+
+.review_comment .block-a {
+	border-top: 1px solid #eee; border-right: 1px solid #eee; padding: 20px 0 40px 40px;
+	margin-left: -40px; margin-top: 24px; margin-bottom: -40px;
+}
+
+.review_comment .block-b {
+	border-top: 1px solid #eee; padding: 28px 0 40px 40px;
+	margin-right: -40px; margin-left: -12px; margin-top: 24px; margin-bottom: -40px;
+}

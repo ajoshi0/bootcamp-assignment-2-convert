@@ -1,0 +1,91 @@
+<div class="review_details">
+
+	<div class="row-fluid">
+		<div class="span8"><h1 class="def">Product Details</h1></div>
+		<div class="span4"><a
+				href="http://www.walmart.com/ip/VIZIO-60-Class-LED-1080p-120Hz-SMART-HDTV-1.94-ultra-slim-E601i-A3/21311919#Q%26A+Exchange"
+				class="btn def pull-right">Have a Question?<span class="right-arrow"></span></a></div>
+	</div>
+
+	<br/><br/>
+
+	<div class="tabbable tabs-left">
+
+		<div class="tab-content">
+			<div class="tab-pane active truncate" id="t1" data-truncate="500">
+				<p class="review_long">
+					{{#with genericContent}}{{{longDescription}}}{{/with}}
+				</p>
+			</div>
+
+			<div class="tab-pane review_specs truncate" id="t2" data-truncate="500">
+			{{#each groups}}
+				<h1 class='def'>{{name}}</h1>
+				{{#each items}}
+					<div><b>{{name}}: </b>{{value}}</div>
+				{{/each}}
+			{{/each}}
+			</div>
+
+			<div class="tab-pane truncate" id="t3" data-truncate="500">
+			   <img class="pull-left" src="http://i.walmartimages.com/i/p/00/02/95/15/40/0002951540080_100X100.jpg"/>
+
+				<b>Walmart Product Care Plans</b>
+
+				<p>A limited product warranty is included free for most items. With an optional Walmart Care Plan you can extend coverage up to 3 additional years. Walmart Care Plan Extended Warranties cover 100% of the cost for repair or replacement, including shipping charges for the exchange. <a href="">See Details</a></p>
+				<p>We'll show you extended warranty options and pricing at checkout if applicable.</p>
+
+				<p>If you made your purchase in a Walmart store and would like to purchase a warranty <a href="http://see.walmart.com/walmart/protection-plans/">Click Here</a></p>
+
+				<p class="review_warranty">{{#with genericContent}}{{supplierWarranty}}{{/with}}</p>
+			</div>
+
+			<div class="tab-pane review_financing truncate" id="t4" data-truncate="500">
+				<!-- Copy Pasted ! -->
+				<h2>Enjoy Great Financing!</h2>
+				<img class="pull-left" style="padding: 0px 8px;" src="images/reviews/cards.png"/>
+
+				<div>Make the most of your shopping experience with the Walmart Discover<sup>®</sup> or Walmart Credit
+					Card.
+				</div>
+				<p>Open a Walmart Credit Card, Spend $100 Today and Get $20 Back*</p>
+
+				<p>*Offer subject to credit approval</p>
+
+				<p><a href="http://www.walmart.com/cservice/contextual_help_popup.gsp?modId=447772"
+					  onclick="s_objectID=&quot;http://www.walmart.com/cservice/contextual_help_popup.gsp?modId=447772_1&quot;;return this.s_oc?this.s_oc(e):true">Learn
+					More</a> or <a
+						onclick="s_objectID=&quot;http://www.walmart.com/instantcredit_1&quot;;return this.s_oc?this.s_oc(e):true"
+						href="http://www.walmart.com/instantcredit">Apply Now</a></p>
+				<b class="BodyXLBold NoPayOffer">No Payments + No Interest <span class="BodyXL">if Paid in Full in 6 Months!</span></b>
+				<img alt="" class="mainSpriteICN sprite-a112_BMLR" src="http://i2.walmartimages.com/i/spacer.gif"
+					 height="25" width="100"/>
+				<img class="pull-left" style="padding: 0px 8px;" src="images/reviews/billme.png"/>
+
+				<p>Enjoy no payments for 6 months. You'll have 6 months with no payments, and no interest if paid in
+					full within 6 months on orders over $250. Otherwise, interest will be charged from the original date
+					of purchase. Bill Me Later is the quick, easy, secure way to buy online without using your credit
+					card. Simply select Bill Me Later at checkout. Subject to credit approval.</p>
+
+				<p>
+					<a href="https://www.securecheckout.billmelater.com/paycapture-content/fetch?hash=28A27SUA&amp;content=/bmlweb/np90drollingiw.html"
+					   onclick="s_objectID=&quot;https://www.securecheckout.billmelater.com/paycapture-content/fetch?hash=28A27SUA&amp;content=/bmlweb_1&quot;;return this.s_oc?this.s_oc(e):true">See
+						Terms</a></p>
+			</div>
+
+			<div class="tab-pane review_gifting" id="t5">
+				<b>Gift options are not available for this item.</b>
+			</div>
+		</div>
+
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#t1" data-toggle="tab">Full Description</a></li>
+			<li class=""><a href="#t2" data-toggle="tab">Specifications</a></li>
+			<li class=""><a href="#t3" data-toggle="tab">Warranty</a></li>
+			<li class=""><a href="#t4" data-toggle="tab">Financing</a></li>
+			<li class=""><a href="#t5" data-toggle="tab">Gifting</a></li>
+		</ul>
+
+	</div>
+
+</div>

@@ -1,0 +1,47 @@
+<div class="slide carousel" id="carousel2">
+	<ol class="carousel-indicators">
+		{{#each3 ratings}}
+			<li data-target="#carousel2" data-slide-to="{{index}}"></li>
+		{{/each3}}
+	</ol>
+
+	<div class="carousel-inner">
+{{#each ratings}}
+		<div class="item">
+			<h1 class="rtitle">{{title}}</h1>
+
+			<h3>by <a class="by" href="#">{{by}}</a> on <span class="date">{{date}}</span> &#x2022; <span class="verified">{{verified}}</span></h3>
+			<i><i class="rating" style="width: {{rating}};"></i></i>
+
+			<p class="descr truncate" data-truncate="90">
+				{{descr}}
+			</p>
+
+			<div class="row-fluid">
+				<div class="span6">
+					<div class="block-a">
+						<b><b>Styling: </b><i><i class="styling" style="width: {{styling}};"></i></i></b>
+						<b><b>Quality: </b><i><i class="quality" style="width: {{quality}};"></i></i></b>
+						<b><b>Fit Accuracy: </b><i><i class="fit" style="width: {{fit}};"></i></i></b>
+						<b><b>Value: </b><i><i class="value" style="width: {{value}};"></i></i></b>
+						<b><b>Satisfaction: </b><i><i class="satisfaction" style="width: {{satisfaction}};"></i></i></b>
+					</div>
+				</div>
+
+				<div class="span6">
+					<div class="block-b">
+						<b>Age: <span class="age">{{age}}</span></b>
+						<b>Gender: <span class="gender">{{gender}}</span></b>
+						<b>Ownership: <span class="ownership">{{ownership}}</span></b>
+						<b>Usage: <span class="usage">{{usage}}</span></b>
+						<b>City: <span class="city">{{city}}</span></b>
+					</div>
+				</div>
+			</div>
+		</div>
+{{/each}}
+	</div>
+
+	<a class="carousel-control left" href="#carousel2" data-slide="prev"></a>
+	<a class="carousel-control right" href="#carousel2" data-slide="next"></a>
+</div>

@@ -1,0 +1,213 @@
+/* Author: Arunesh Joshi */
+
+@font-face {
+	src: url(../CartoGothicStd-Book.otf);
+	font-family: "Custom";
+	font-weight: normal;
+}
+
+@font-face {
+	src: url(../CartoGothicStd-Bold.otf);
+	font-family: "Custom";
+	font-weight: bold;
+}
+
+* { outline: none !important; }
+::-moz-focus-inner { border: none !important; }
+
+body {
+	background: #fff; margin: 0px; padding: 0px; font: normal 12px/14px "Custom";
+}
+
+/* ---- */
+.header {
+	background: #fff url(../../images/bg-header.png) repeat-x; margin-bottom: 16px;
+	border-bottom: 2px solid #e8e8e8; z-index: 9999;
+}
+
+.header > div {
+	padding: 4px 0px;
+}
+
+/* ~ */
+.header .logo {
+	text-align: left; display: inline-block; margin-left: 14px;
+}
+
+.header .logo > div {
+	display: inline-block; width: 194px;
+}
+
+/* ~ */
+.header .menu {
+	text-align: right; /*padding-right: 3%;*/
+}
+
+.header .links a {
+	display: inline-block; position: relative; margin: 0px; padding: 15px 0px; text-align: left;
+	padding-right: 24px; margin-right: 22px;
+}
+
+.header .links a:after {
+	position: absolute; right: 0px; top: 0px; width: 2px; height: 100%; content: "";
+	background: url(../../images/bg-vert.png);
+}
+
+.header .links a.last:after {
+	display: none;
+}
+
+.header .links a > img {
+	display: inline-block; vertical-align: middle; margin-right: 6px;
+}
+
+.header .links a > b {
+	display: inline-block; vertical-align: middle; color: #535a5f; font-size: 1.3em; font-weight: normal; text-shadow: 0px 1px 0px #fff;
+}
+
+.header .links a > span {
+	display: block; color: #9da4ad; font-size: 1.2em; text-shadow: 0px 1px 0px #fff;
+}
+
+/* ~ */
+.ui-search-box {
+	margin-top: 8px;
+	position: relative;
+	display: inline-block;
+	background: url(../../images/bg-textbox.png) 0px -42px repeat-x;
+	padding: 0px;
+	margin-left: 16px;
+}
+
+.ui-search-box:before {
+	position: absolute; left: -12px; top: 0px; content: ""; width: 13px; height: 42px;
+	background: url(../../images/bg-textbox.png) 0px 0px repeat-x;
+}
+
+.ui-search-box:after {
+	position: absolute; right: -12px; top: 0px; content: ""; width: 13px; height: 42px;
+	background: url(../../images/bg-textbox.png) 0px -84px repeat-x;
+}
+
+.ui-search-box input {
+	background: url(../../images/icon-search.png) 0px center no-repeat; border: none !important; margin: 0px !important; padding: 11px 0px 11px 30px !important; font-size: 1.3em; line-height: 1em; font-weight: normal; font-family: "Custom";
+	-moz-border-radius: none; -webkit-border-radius: none; -o-border-radius: none; -ms-border-radius: none; border-radius: none;
+}
+
+.ui-search-box input:focus {
+	-moz-box-shadow: none; -webkit-box-shadow: none; -o-box-shadow: none; -ms-box-shadow: none; box-shadow: none;
+}
+
+/* ---- */
+.breadcrumb {
+	background: #fff; display: block; padding: 0px 24px; margin: 0px; line-height: 1em;
+}
+
+.breadcrumb a {
+	display: inline-block; vertical-align: middle; position: relative; color: #0e79be; font-size: 1.1em; font-weight: bold; text-transform: uppercase; margin-right: 35px; height: 20px;
+}
+
+.breadcrumb a img {
+	margin-top: -5px;
+}
+
+.breadcrumb a:after {
+	position: absolute; right: -24px; top: -3px; background: url(../../images/icon-breadcrumb-arrow.png); width: 10px; height: 16px; content: "";
+}
+
+.breadcrumb a.last:after {
+	display: none;
+}
+
+/* ---- */
+.title {
+	text-align: center; margin-bottom: 32px; margin-top: 16px;
+}
+
+.title h1 {
+	color: #333; font-size: 3.5em; font-weight: normal; margin: 0px;
+}
+
+.title h2 {
+	color: #aaa; font-size: 1.9em; font-weight: normal; margin: 0px;
+}
+
+.title h2 b {
+	color: #0e79be; font-weight: normal;
+}
+
+/* ---- */
+.featuring {
+	text-align: center;
+}
+
+.featuring img {
+	display: inline-block; vertical-align: bottom; margin: 0px 16px;
+}
+
+/* ---- */
+.footer {
+	background-color: #0e77bd; margin-top: 32px;
+	background-image: url(../../images/bg-footer.png), url(../../images/bg-footer-2.png);
+	background-position: center 0px, right bottom;
+	background-repeat: no-repeat, no-repeat;
+	position: relative;
+}
+
+.footer .list {
+	padding: 48px 0px; display: inline-block; vertical-align: top; margin-left: 50px;
+	z-index: 999; position: relative;
+}
+
+.footer .list a {
+	display: block; font-weight: normal; font-size: 1.1em; line-height: 1.7em; color: rgb(185,227,255); font-family: "Custom"; font-size: 1em;
+}
+
+.footer .title {
+	position: absolute; right: 30px; bottom: 300px; color: #fff; font-size: 2.3em; letter-spacing: -1px;
+	text-shadow: -1px -1px 0px rgb(0,80,140); z-index: 0;
+}
+
+/* ~ */
+.footer .top {
+	padding: 60px 0px 30px 0px; text-align: center;
+}
+
+.footer .top > div {
+	display: inline-block; text-align: left;
+}
+
+.footer .top b {
+	vertical-align: middle; font-size: 2.8em; text-shadow: 0px -1px 0px #000; letter-spacing: -1px; color: #fff;
+}
+
+.footer .top img {
+	vertical-align: middle; margin-left: 5px;
+}
+
+.footer .top input[type="text"] {
+	padding: 9px 16px; vertical-align: middle; margin: 0px; line-height: 1em; font-family: "Custom"; font-size: 1.3em; font-weight: bold; border: 1px solid rgb(10,97,155); width: 300px; margin-left: 24px; text-align: left;
+	-moz-border-radius: 7px; -webkit-border-radius: 7px; -o-border-radius: 7px; -ms-border-radius: 7px; border-radius: 7px;
+	-moz-box-shadow: inset 2px 3px 8px -2px #999; -webkit-box-shadow: inset 2px 3px 8px -2px #999; -o-box-shadow: inset 2px 3px 8px -2px #999; -ms-box-shadow: inset 2px 3px 8px -2px #999; box-shadow: inset 2px 3px 8px -2px #999;
+}
+
+.footer .top .submit {
+	position: relative; vertical-align: middle; display: inline-block; color: #fff; font-family: "Custom"; border: none; font-size: 1.5em; text-shadow: 0px -1px 0px #333;
+	padding: 14px 10px 13px 10px; margin: 0px 12px; cursor: pointer;
+	background: url(../../images/bg-button.png) 0px -84px repeat-x;
+}
+
+.footer .top .submit:before {
+	position: absolute; left: -6px; top: 0px; width: 6px; height: 100%; content: ""; display: block;
+	background: url(../../images/bg-button.png) 0px 0px;
+}
+
+.footer .top .submit:after {
+	position: absolute; right: -6px; top: 0px; width: 6px; height: 100%; content: ""; display: block;
+	background: url(../../images/bg-button.png) 0px -42px;
+}
+
+/* ---- */
+.divider-horz {
+	background: #fff url(../../images/bg-horz.png) center 0px no-repeat; height: 26px; margin: 0px;
+}

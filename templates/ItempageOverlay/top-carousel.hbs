@@ -1,0 +1,16 @@
+<div class="slide carousel" id="carousel">
+    <ol class="carousel-indicators">
+{{#each3 images}}
+        <li data-target="#carousel" data-slide-to="{{index}}"></li>
+{{/each3}}
+    </ol>
+
+    <div class="carousel-inner">
+{{#each3 images}}
+		<div class="item"><img src="{{lgImageSrc}}"/></div>
+{{/each3}}
+    </div>
+
+    <a class="carousel-control left" href="#carousel" data-slide="prev"></a>
+    <a class="carousel-control right" href="#carousel" data-slide="next"></a>
+</div>

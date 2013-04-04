@@ -1,0 +1,29 @@
+<div class="review_related">
+	<div class="row-fluid">
+		<div class="span9"><h1 class="def">Please Who Viewed This Item Also Viewed</h1></div>
+		<div class="span3"><a href="#" class="review_close2 btn def pull-right">See More<span class="right-arrow"></span></a></div>
+	</div>
+
+	<br/><br/>
+
+	<div class="row-fluid">
+{{#each related}}
+		<div class="span4">
+			<div class="item {{cls}}">
+				<img src="{{image}}" data-placement="right" title="{{justtext ldescr}}"/>
+				<a href="#">{{title}}</a>
+				<span>{{descr}}</span>
+				<em>${{price}}<span>{{cents}}</span></em>
+				{{#if with_discount}}
+					<em class="striked">${{list_price}}<span>{{list_cents}}</span></em>
+				{{/if}}
+				<i><i style="width:{{rating}}"></i></i>
+			</div>
+		</div>
+{{/each}}
+	</div>
+
+	<div class="row-fluid">
+		<div class="review_separator"></div>
+	</div>
+</div>

@@ -1,0 +1,63 @@
+<div class="review_comments">
+
+	<div class="row-fluid">
+		<div class="span8"><h1 class="def">Reviews &amp; Ratings <span>({{#with ratings}}{{length}}{{/with}} Total)</span></h1></div>
+		<div class="span4"><a
+				href="https://www.walmart.com/subflow/BVAppsLoginContext/215449584/sub_generic_login/start.do?bvappcode=rr&bvauthenticateuser=true&bvcontenttype=REVIEW_SUBMISSION&bvdisplaycode=1336&bvpage=http%3A%2F%2Fwalmart.ugc.bazaarvoice.com%2F1336%2F21311919%2Fsubmitreview.htm%3Fformat%3Dembedded%26campaignid%3DBV_RATING_SUMMARY%26sessionparams%3D__BVSESSIONPARAMS__%26return%3Dhttp%253A%252F%252Fwww.walmart.com%252Fip%252FVIZIO-60-Class-LED-1080p-120Hz-SMART-HDTV-1.94-ultra-slim-E601i-A3%252F21311919%26innerreturn%3Dhttp%253A%252F%252Fwalmart.ugc.bazaarvoice.com%252F1336%252F21311919%252Fratings.djs%253Fformat%253Dembeddedhtml%26user%3D__USERID__%26authsourcetype%3D__AUTHTYPE__&bvproductid=21311919"
+				class="btn def pull-right">Write a Review?<span class="right-arrow"></span></a></div>
+	</div>
+
+	<br/><br/>
+
+	<div class="row-fluid">
+
+		<div class="span8">
+			<div class="btn-group dd">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="value filter1" data-value="3">Men &amp; Women</span> <span
+						class="caret"></span></a>
+				<ul class="dropdown-menu filter filter1">
+					{{#each filterGenders}}
+						<li><a href='#' data-value='{{value}}'>{{title}}</a></li>
+					{{/each}}
+				</ul>
+			</div>
+
+			<div class="btn-group dd">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="value filter2" data-value="All">All Ages</span> <span class="caret"></span></a>
+				<ul class="dropdown-menu filter filter2">
+					{{#each filterAges}}
+					<li><a href="#" data-value="{{value}}">{{title}}</a></li>
+					{{/each}}
+				</ul>
+			</div>
+
+			<div class="btn-group dd">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="value filter3" data-value="0,5">All Ratings</span> <span
+						class="caret"></span></a>
+				<ul class="dropdown-menu filter filter3">
+					{{#each filterRatings}}
+					<li><a href="#" data-value="{{value}}">{{title}}</a></li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+
+		<div class="span4 left-separator">
+			<div class="btn-group dd pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="value filter4" data-value="helpful">By Most Helpful</span> <span
+						class="caret"></span></a>
+				<ul class="dropdown-menu filter filter4">
+					<li><a href="#" data-value="helpful">By Most Helpful</a></li>
+					<li><a href="#" data-value="rating">By Rating</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="review_comment">
+	<div class="review_carousel b">
+	</div>
+	</div>
+
+</div>
