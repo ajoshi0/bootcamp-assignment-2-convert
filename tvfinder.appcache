@@ -1,0 +1,42 @@
+CACHE MANIFEST
+#version 1.0
+
+CACHE:
+#lib css files
+/lib/bootstrap/css/bootstrap.min.css
+/lib/bootstrap/css/bootstrap-responsive.min.css
+/lib/bootstrap/css/bootstrap-select.min.css
+/lib/jquery-ui/css/jquery-ui-1.10.1.min.css
+
+#lib js files
+/lib/jquery-1.8.3.js
+/lib/bootstrap/js/bootstrap.min.js
+/lib/jquery-ui/js/jquery-ui-1.10.1.min.js
+/lib/bootstrap/js/bootstrap-select.js
+/lib/jquery.lazyload.min.js
+/lib/underscore-min.js
+/lib/backbone-min.js
+/lib/handlebars.js
+
+#font files
+/styles/CartoGothicStd-Book.otf
+/styles/CartoGothicStd-Bold.otf
+
+#image files
+/images/logo.png
+
+#js files
+/js/TVFinder/application.js
+/js/ItempageOverlay/view.js
+/js/helpers.js
+
+#style sheets
+/styles/Global/style.css
+/styles/TVFinder/style.css
+/styles/ItempageOverlay/style.css
+
+NETWORK:
+*
+
+FALLBACK:
+#/images/ /images/missing.png
