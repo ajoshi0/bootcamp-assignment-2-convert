@@ -22,6 +22,7 @@
 
 	(a) http://twitter.github.com/bootstrap/
 	(b) http://jqueryui.com/
+	(c) http://westciv.com/speakEasy/presentations/appcache/appcache-presentation.html
 
 
 --------------
