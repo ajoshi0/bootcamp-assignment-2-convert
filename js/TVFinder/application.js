@@ -101,8 +101,9 @@ $(function()
 
 		viewItem: function() {
 			var view;
-			$("body").append((view = new ProductDetailsView({ model: this.model })).render().el);
-			view.show();
+			//$("body").append((view = new ProductDetailsView({ model: this.model })).render().el);
+			//view.show();
+            view = new ProductDetailsView({ model: this.model });
 		}
 
 	});

@@ -107,12 +107,21 @@ var ProductDetailsView = Backbone.View.extend ({
 
 	initialize: function()
 	{
-		var self = this;
+		$.ajax ({ type: "get", async: true, url: "res/data/"+this.model.id+".json", dataType: "json", success: function(result) {
 
-		$.ajax ({ type: "get", async: false, url: "res/data/"+this.model.id+".json", dataType: "json", success: function(result) { self.data = result; } });
+        this.data = result;
 
 		this.data.model = this.model.toJSON();
-		this.data.ratings = window.ratings;
+
+            $.ajax ({ type: "get", async: true, url: "res/ratingsReviews.json", dataType: "json", success: function(result)
+            {
+                this.data.ratings = result;
+                // Populate filters.
+                this.populateFilters();
+
+                $("body").append(this.render().el);
+                this.show();
+            }.bind(this)});
 
 		this.data.images = this.data.alternateImageData;
 		if (!this.data.images || !this.data.images.length) this.data.images = [{ lgImageSrc: this.data.productImageUrl }];
@@ -144,8 +153,8 @@ var ProductDetailsView = Backbone.View.extend ({
 		for (var i = 0 ; i < this.data.groups.length; i++)
 			this.data.groups[i].items.sort(function(a,b){return a.order-b.order});
 
-		// Populate filters.
-		this.populateFilters();
+
+        }.bind(this) });
 
 		// Load templates.
 		this.templates = {
@@ -334,10 +343,7 @@ var ProductDetailsView = Backbone.View.extend ({
 	}
 });
 
-$.ajax ({ type: "get", async: false, url: "res/ratingsReviews.json", dataType: "json", success: function(result)
-{
-	window.ratings = result;
-}});
+
 
 $(function() {
 	cart.init();
